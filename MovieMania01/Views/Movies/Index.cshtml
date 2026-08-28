@@ -1,0 +1,61 @@
+﻿@using MovieMania01.Models;
+@model List<Movie>
+
+<h1>Movies</h1>
+
+<a>+Add movie</a>
+
+<div class="row">
+    @* <div class="col-sm-6 mb-3 mb-sm-0"> *@
+    <div class="col-sm-4 mb-4 mb-sm-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release Year</th>
+            <th>Duration</th>
+            <th>Description</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.ReleaseYear</td>
+                <td>@movie.DurationInMinutes</td>
+                <td>@movie.Description</td>
+                <td>@movie.Rating</td>
+            </tr>
+        }
+</table>
+

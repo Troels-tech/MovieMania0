@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Welcome to Movie Mania!</h1>
+    var currentTime = DateTime.Now;
+    <p>The current date and time is: @currentTime</p>
+
+    @if (currentTime.Hour < 12)
+    {
+        <p>Good Morning!</p>
+
+        
+    }
+    else
+    {
+
+        <p>Good Afternoon</p>
+    }
+
+}
